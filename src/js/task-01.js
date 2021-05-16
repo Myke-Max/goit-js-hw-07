@@ -13,7 +13,7 @@
 // - Количество элементов: 4
 
 const catagoryListRef = document.querySelector('#categories');
-console.log(catagoryListRef);
+
 const catagoryItemRef = catagoryListRef.children
 console.log(`В списке ${catagoryItemRef.length} категории.`)
 
