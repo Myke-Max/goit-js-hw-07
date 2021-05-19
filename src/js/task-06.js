@@ -14,17 +14,13 @@ const inputValue = document.querySelector('#validation-input')
 const validInput = (event) => {
     const validWidth = Number(inputValue.dataset.length)
     const currentWidth = event.target.value.length
-    console.log(validWidth)
-    console.log(currentWidth)
-
-
-    validWidth === currentWidth
-        ? inputValue.classList.add('valid') &&
-        inputValue.classList.remove('invalid')
+    inputValue.classList.add('invalid')
+    
+    validWidth === currentWidth && event.currentTarget.value.trim(' ') !== ''
+       
+        ? inputValue.classList.replace('invalid','valid')
         
-        : inputValue.classList.add('invalid') &&
-        inputValue.classList.remove('valid')
-     
+        : inputValue.classList.replace('valid','invalid')  
 }
 
 inputValue.addEventListener('blur', validInput)
