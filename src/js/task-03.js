@@ -40,7 +40,7 @@ const newImg = images.map(({ url, alt }) => {
     // console.log(newItemRef)
 
   return `<li> <img src = ${url} alt = ${alt} width = "400"> </li>`
-}).join('')
+}).join(' ')
 galleryItemRef.insertAdjacentHTML('afterbegin',newImg)
 console.log(galleryItemRef)
 
